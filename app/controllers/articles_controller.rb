@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  def dashboard
+    @articles = Article.all
+  end
+
   # GET /articles
   # GET /articles.json
   def index
